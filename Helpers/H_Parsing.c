@@ -29,7 +29,6 @@ t_philo	*parsing(int ac, char **av)
 	return (alpha);
 }
 
-
 int	ft_cmplt(void)
 {
 	write(1, "\nOverFlow  !\n", 13);

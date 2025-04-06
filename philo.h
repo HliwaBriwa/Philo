@@ -6,6 +6,7 @@
  # include <stdlib.h>
  # include <limits.h>
  # include <pthread.h>
+ # include <sys/time.h>
 
 typedef struct	s_philo
 {
@@ -17,25 +18,33 @@ typedef struct	s_philo
 	size_t	slp_time;
 
 	pthread_mutex_t	*big_lock;
-	struct t_philo	*philoz;
+	pthread_t	*big_thread;
 	
 } t_philo;
 
-t_philo	*parsing(int ac, char **av);
+typedef	struct	s_timeval
+{
+	size_t	seconds;
+	size_t	useconds;
+}	t_timeval;
+
 
 void	flush();
 void	usage();
-void	*ft_malloc(size_t a);
-void	*free_alloc(void *p, int flag);
 void	create_mutex(t_philo *data);
 void	create_philo(t_philo *data);
+void	create_thread(t_philo *data);
 
+void	*ft_malloc(size_t a);
+void	*free_alloc(void *p, int flag);
 
 
 int		is_digit(char *str);
 int		ft_atoi(char *str);
 int		ft_cmplt(void);
 
+size_t	current_time();
 
+t_philo	*parsing(int ac, char **av);
 
 #endif
