@@ -1,9 +1,10 @@
 #include "../philo.h"
 
-void    parsing(int ac, char **av)
+t_philo	*parsing(int ac, char **av)
 {
-	t_philo	(*alpha);
+	t_philo	*alpha;
 
+	alpha = ft_malloc(sizeof(t_philo));
 	if (ac != 5 && ac != 6)
 		usage();
 	if(is_digit(av[1]) || is_digit(av[2]
@@ -25,10 +26,53 @@ void    parsing(int ac, char **av)
 		if (!(*alpha).mst_eat)
 			usage();
 	}
+	return (alpha);
 }
 
-void	flush()
+
+int	ft_cmplt(void)
 {
-	write (2, "\nError !\n", 9);
+	write(1, "\nOverFlow  !\n", 13);
 	exit(1);
+}
+
+int	ft_atoi(char *str)
+{
+	int			a;
+	double		res;
+	int			sign;
+
+	sign = 1;
+	res = 0;
+	a = 0;
+	if (str[a] == '-' || str[a] == '+')
+	{
+		if (str[a] == '-')
+			sign *= -1;
+		a++;
+	}
+	while (str[a] <= '9' && str[a] >= '0')
+	{
+		if ((sign == 1 && res > (INT_MAX - (str[a] - '0')) / 10)
+			|| (res > (INT_MIN + (str[a] - '0')) / -10 && sign == -1))
+			return (ft_cmplt());
+		res = res * 10 + str[a++] - 48;
+	}
+	return (sign * res);
+}
+
+int	is_digit(char *str)
+{
+	int	a;
+
+	a = 0;
+	if (str[a] == '+' || str[a] == '-')
+		a++;
+	while (str[a])
+	{
+		if (!(str[a] <= '9' && str[a] >= '0'))
+			return (1);
+		a++;
+	}
+	return (0);
 }

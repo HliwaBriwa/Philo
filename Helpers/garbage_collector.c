@@ -6,11 +6,11 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 08:21:26 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/03/15 05:41:23 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/04/06 16:16:48 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pushswap.h"
+#include "../philo.h"
 
 void	*ft_malloc(size_t a)
 {
@@ -18,7 +18,7 @@ void	*ft_malloc(size_t a)
 
 	p = malloc(a);
 	if (!p)
-		free_alloc(p, 1);
+		flush();
 	else
 		free_alloc(p, 0);
 	return (p);
@@ -46,7 +46,6 @@ void	*free_alloc(void *p, int flag)
 		}
 		free(alpha);
 		a = 0;
-		return (NULL);
 	}
 	else if (!flag && alpha)
 		alpha[a++] = p;

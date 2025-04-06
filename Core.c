@@ -1,12 +1,12 @@
 #include "philo.h"
 
-void	engine()
+void	engine(t_philo *data)
 {
-	
+	create_mutex(data);
+	create_philo(data);
 }
 
 int main(int ac, char **av)
 {
-    parsing(ac, av);
-    Engine();
+    Engine(parsing(ac, av));
 }
