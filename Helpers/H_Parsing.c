@@ -5,16 +5,20 @@ t_philo	*parsing(int ac, char **av)
 	t_philo	*alpha;
 
 	alpha = ft_malloc(sizeof(t_philo));
+
+	// printf("\nac %d\n", ac);
 	if (ac != 5 && ac != 6)
 		usage();
-	if(is_digit(av[1]) || is_digit(av[2]
-			|| is_digit(av[3] || is_digit(av[4]))))
+
+
+
+	if(is_digit(av[1]) || is_digit(av[2])
+			|| is_digit(av[3]) || is_digit(av[4]))
 		usage();
 	(*alpha).nbr_philo = ft_atoi(av[1]);
 	(*alpha).die_time = ft_atoi(av[2]);
 	(*alpha).eat_time = ft_atoi(av[3]);
 	(*alpha).slp_time = ft_atoi(av[4]);
-		usage();
 	if (!(*alpha).nbr_philo || !(*alpha).die_time
 			|| !(*alpha).eat_time || !(*alpha).slp_time)
 		usage();

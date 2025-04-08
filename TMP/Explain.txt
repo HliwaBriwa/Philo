@@ -1,0 +1,20 @@
+
+
+													Philo : 
+
+
+		-1	We Create One Philo Struct that got Pointers for other Stuff !
+
+		-2	We enter the User Input after It's Validation To Philo_Struct Members (slp_time ........) !
+
+		-3	And then We malloc an Array of Mutexzz and We Enter them In Big_mutex (Struct_Member) !
+
+		-4	We do the Same for Forks Which are characters variables In Big_forks (Struct_Member) !
+
+		-5	Then We create an Array of Bag_Struct Each Thread will have its Own Bag which have a Pointer it's Fork 
+
+		-6 Later This Fork (character) Will Be Locked To Mimic  The Game !
+
+		-7	And Then Each Bag get's It's fork Address !
+
+		-8	Later We Will Pass for Each Thread It's bag Which Contains 

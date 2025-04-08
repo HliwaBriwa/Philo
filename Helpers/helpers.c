@@ -6,11 +6,3 @@ void	usage()
 	free_alloc(NULL, 1);
 	exit(1);
 }
-
-
-void	flush()
-{
-	write (2, "\nError !\n", 9);
-	free_alloc(NULL, 1);
-	exit(1);
-}

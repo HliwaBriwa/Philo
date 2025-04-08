@@ -3,10 +3,10 @@
 void	engine(t_philo *data)
 {
 	create_mutex(data);
-	create_philo(data);
+	create_thread(data);
 }
 
 int main(int ac, char **av)
 {
-    Engine(parsing(ac, av));
+    engine(parsing(ac, av));
 }

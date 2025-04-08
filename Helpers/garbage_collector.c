@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 08:21:26 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/04/06 16:16:48 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/04/07 18:55:37 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,11 @@ void	*free_alloc(void *p, int flag)
 	else if (!flag && alpha)
 		alpha[a++] = p;
 	return (NULL);
+}
+
+void	flush()
+{
+	write (2, "\nError !\n", 9);
+	free_alloc(NULL, 1);
+	exit(1);
 }

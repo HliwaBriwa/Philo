@@ -4,7 +4,10 @@ CC = cc -Wall -Wextra -Werror
 
 HLP = Helpers/Helpers.c \
 		Helpers/H_Parsing.c \
-		Helpers/garbage_collector.c
+		Helpers/garbage_collector.c \
+		Helpers/Brain.c \
+		Helpers/Routines.c \
+		Helpers/Initialyze.c
 
 H_OBJ = $(HLP:.c=.o)
 
