@@ -44,15 +44,18 @@ void	flush();
 void	usage();
 void	create_mutex(t_philo *data);
 void	create_philo(t_philo *data);
+void	init_thread(t_philo *data);
 void	create_thread(t_philo *data);
+
 void	engine(t_philo *data);
+void	*brain(void *bagg);
 
 void	*ft_malloc(size_t a);
 void	*free_alloc(void *p, int flag);
 
-void	sleeping(t_philo *data, int id, size_t passed);
-void	thinking(t_philo *data, int id);
-void	eating(t_philo *data, int id);
+void	sleeping(t_bag *data, size_t passed);
+void	thinking(t_bag *data);
+void	eating(t_bag *data, char *fork1, char *fork2);
 
 int		is_digit(char *str);
 int		ft_atoi(char *str);

@@ -23,7 +23,7 @@ void	create_mutex(t_philo *data)
 //	To The Execution_Flow ! 
 //	We give for each Bag an ID and an A Fork !
 
-void	create_thread(t_philo *data)
+void	init_thread(t_philo *data)
 {
 	size_t	a;
 
@@ -55,4 +55,25 @@ size_t	current_time()
 	// prcs = (clock.seconds * 1000) + (clock.useconds / 1000);
 	// return (prcs);
 	return (1);
+}
+
+void	create_thread(t_philo *data)
+{
+	size_t	a;
+
+	a = 0;
+	while (a < (*data).nbr_philo)
+	{
+		if (pthread_create(&((*data).big_thread[a]), NULL, brain, (*data).big_bags++))
+			flush();
+		a++;
+	}
+	a = 0;
+	while (a < (*data).nbr_philo)
+	{
+		if (pthread_join(((*data).big_thread[a]), NULL))
+			flush();
+		a++;
+	}
+
 }

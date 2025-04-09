@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 20:27:44 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/04/08 06:52:17 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/04/09 17:53:26 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,22 @@ void	sleeping(t_bag *data, size_t passed)
 	return;
 }
 
-void	eating(t_bag *data)
+//	This function Mimics the Eatign Behavior 
+//	if other thread access it we get Race Condition !
+
+void	eating(t_bag *data, char *fork1, char *fork2)
 {
 	size_t	start;
 
 	
+
+	pthread_mutex_lock(fork1);
+	pthread_mutex_lock(fork2);
 	printf("Philosopher : %d is Eating !\n", (*data).id);
 	start = current_time();
 	while (current_time() - start < (*((*data).info)).eat_time)
 		usleep(500);
+	pthread_mutex_unlock(fork1);
+	pthread_mutex_unlock(fork2);
 	return;
 }
