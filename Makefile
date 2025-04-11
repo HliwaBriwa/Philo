@@ -2,7 +2,7 @@ CC = cc -Wall -Wextra -Werror
 
 ####################
 
-HLP = Helpers/Helpers.c \
+HLP = Helpers/helpers.c \
 		Helpers/H_Parsing.c \
 		Helpers/garbage_collector.c \
 		Helpers/Brain.c \
