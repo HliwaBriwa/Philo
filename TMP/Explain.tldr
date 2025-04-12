@@ -1571,82 +1571,6 @@
 			"typeName": "shape"
 		},
 		{
-			"id": "pointer:pointer",
-			"typeName": "pointer",
-			"x": -3829.352683783096,
-			"y": 56.3545278337491,
-			"lastActivityTimestamp": 1744378483250,
-			"meta": {}
-		},
-		{
-			"followingUserId": null,
-			"opacityForNextShape": 1,
-			"stylesForNextShape": {},
-			"brush": null,
-			"scribbles": [],
-			"cursor": {
-				"type": "default",
-				"rotation": 0
-			},
-			"isFocusMode": false,
-			"exportBackground": true,
-			"isDebugMode": false,
-			"isToolLocked": false,
-			"screenBounds": {
-				"x": 0,
-				"y": 0,
-				"w": 1143,
-				"h": 838
-			},
-			"insets": [
-				false,
-				false,
-				true,
-				false
-			],
-			"zoomBrush": null,
-			"isGridMode": false,
-			"isPenMode": false,
-			"chatMessage": "",
-			"isChatting": false,
-			"highlightedUserIds": [],
-			"isFocused": true,
-			"devicePixelRatio": 2,
-			"isCoarsePointer": false,
-			"isHoveringCanvas": true,
-			"openMenus": [],
-			"isChangingStyle": false,
-			"isReadonly": false,
-			"meta": {},
-			"duplicateProps": null,
-			"id": "instance:instance",
-			"currentPageId": "page:page",
-			"typeName": "instance"
-		},
-		{
-			"editingShapeId": null,
-			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:EIQ8zEd7YJaAifK4QdOL5"
-			],
-			"hoveredShapeId": "shape:EIQ8zEd7YJaAifK4QdOL5",
-			"erasingShapeIds": [],
-			"hintingShapeIds": [],
-			"focusedGroupId": null,
-			"meta": {},
-			"id": "instance_page_state:page:page",
-			"pageId": "page:page",
-			"typeName": "instance_page_state"
-		},
-		{
-			"x": 5019.915183783096,
-			"y": 895.1142221662509,
-			"z": 0.25,
-			"meta": {},
-			"id": "camera:page:page",
-			"typeName": "camera"
-		},
-		{
 			"x": 248.80793528365865,
 			"y": 865.9363309588114,
 			"rotation": 0,
@@ -4255,9 +4179,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -4298.2350912584225,
-			"y": 42.058018283916226,
-			"rotation": 0,
+			"x": -3440.0593252633207,
+			"y": 710.937394316175,
+			"rotation": 5.8643062867009474,
 			"isLocked": false,
 			"opacity": 1,
 			"meta": {},
@@ -4271,10 +4195,109 @@
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": false,
-				"scale": 3.9955677339862485
+				"scale": 2.3668539013757237
 			},
 			"parentId": "page:page",
 			"index": "b00g8PIOr",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": -3373.5740572450904,
+			"y": 990.8277330190185,
+			"lastActivityTimestamp": 1744382144907,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "move",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1143,
+				"h": 801
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 2,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:XKis0c02ehiM4Yv-NYyPs"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 4905.90218224509,
+			"y": 789.6410169809815,
+			"z": 0.25,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": -3407.5672182667054,
+			"y": 895.6394632932677,
+			"rotation": 0.8552113334772214,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:XKis0c02ehiM4Yv-NYyPs",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 63.103145891080025,
+				"text": "!not!",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 2.3668539013757237
+			},
+			"parentId": "page:page",
+			"index": "b00gj1xgQ",
 			"typeName": "shape"
 		}
 	]

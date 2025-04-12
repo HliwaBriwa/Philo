@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 18:07:43 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/04/11 14:39:14 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/04/11 20:22:54 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,16 @@ void	*brain(void *bagg)
 	t_bag	*bag;
 	t_philo	*info;
 	int			a;
-	static	int	a;
 
 	bag = (t_bag*)bagg;
 	info = (*bag).info;
-
-	if (!a)
-	{
-		while (a < (*(*bag).info).nbr_philo)
-		{
-			if (is_free(bag) && is_free((*bag).before))
-				eating(bag, (*bag).lock, (*((*bag).next)).lock);
-				a++;
-		}
-		a++;
-	}
-	else
-	{
-		
-	}
+	if (!is_even((*bag).id) && !is_free((*((*bag).before)).id))
+		eating(bag, (*bag).lock, (*(*bag).before).lock);
 	return (NULL);
+}
+
+void	redo(t_bag *bag)
+{
+	if (!is_free((*bag).free) && !is_free((*(*bag).before).free))
+		eating(bag, (*bag).lock, (*(*bag).before).lock);
 }

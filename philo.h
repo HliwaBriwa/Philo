@@ -62,10 +62,12 @@ void	*free_alloc(void *p, int flag);
 void	sleeping(t_bag *data);
 void	thinking(t_bag *data, size_t passed);
 void	eating(t_bag *bag, pthread_mutex_t *mutex1, pthread_mutex_t *mutex2);
+void	redo(t_bag *bag);
 
 int		is_digit(char *str);
 int		ft_atoi(char *str);
 int		ft_cmplt(void);
+int		is_even(int id);
 int		is_free(t_bag *bag);
 
 size_t	current_time();

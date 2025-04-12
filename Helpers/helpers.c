@@ -10,11 +10,17 @@ void	usage()
 //	This function Checks if Fork is free using the 
 //	the bag of The thread !
 
-int	is_even(t_bag *bag)
+int	is_even(int id)
 {
-	if (!((*bag).id %2))
+	if (!(id %2))
 		return(0);
 	return (1);
+}
+int	is_free(t_bag *bag)
+{
+	if (((*bag).free))
+		return(1);
+	return (0);
 }
 
 void	link_it(t_philo *data)
